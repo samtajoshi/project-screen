@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/project-screen/static/css/main.eb0d1c33.chunk.css",
+    "main.js": "/project-screen/static/js/main.b09dd4da.chunk.js",
+    "main.js.map": "/project-screen/static/js/main.b09dd4da.chunk.js.map",
+    "runtime-main.js": "/project-screen/static/js/runtime-main.6d4a467c.js",
+    "runtime-main.js.map": "/project-screen/static/js/runtime-main.6d4a467c.js.map",
+    "static/css/2.80157bf1.chunk.css": "/project-screen/static/css/2.80157bf1.chunk.css",
+    "static/js/2.8b42fe19.chunk.js": "/project-screen/static/js/2.8b42fe19.chunk.js",
+    "static/js/2.8b42fe19.chunk.js.map": "/project-screen/static/js/2.8b42fe19.chunk.js.map",
+    "index.html": "/project-screen/index.html",
+    "precache-manifest.d51f804bf10c779c294f93ee7f4b5777.js": "/project-screen/precache-manifest.d51f804bf10c779c294f93ee7f4b5777.js",
+    "service-worker.js": "/project-screen/service-worker.js",
+    "static/css/2.80157bf1.chunk.css.map": "/project-screen/static/css/2.80157bf1.chunk.css.map",
+    "static/css/main.eb0d1c33.chunk.css.map": "/project-screen/static/css/main.eb0d1c33.chunk.css.map",
+    "static/media/mdb.css": "/project-screen/static/media/arrow_right.8ef6a08c.svg",
+    "static/media/all.min.css": "/project-screen/static/media/fa-solid-900.c2801fb4.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6d4a467c.js",
+    "static/css/2.80157bf1.chunk.css",
+    "static/js/2.8b42fe19.chunk.js",
+    "static/css/main.eb0d1c33.chunk.css",
+    "static/js/main.b09dd4da.chunk.js"
+  ]
+}
