@@ -1,0 +1,213 @@
+.box{
+    
+     border: 1px solid grey;    
+    margin-bottom: 2%;
+    border-left: 5px solid 
+}
+.notification {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+  padding: 5px 6px;
+  position: relative;
+  display: inline-block;
+  border-radius: 2px;
+  font-size: 27px;
+}
+.badge {
+  position: absolute;
+  top: -3px;
+  right: -10px;
+  padding: 3px 3px;
+  border-radius: 50%;
+  background: red;
+  color: white;
+  font-size: 12px;
+}
+
+
+
+.circleBg{
+    border-radius: 100%;
+    background-color: lightgreen;
+    padding : 7px;
+    color: white;
+}
+.circleBell{
+    border-radius: 100%;
+    background-color: white;
+    padding : 7px;
+    color: white;
+}
+
+.styleHeader{
+    background-color: white;
+    margin: 0% 5% 3% 5%;
+    padding: 1.5%;
+    font-weight: bold;
+    
+}
+
+
+
+.styleBox{
+    border-radius: 5%;
+    margin: 1% .01%;
+    align-content: center;
+    justify-content: center;
+    padding: .5% 6%;
+    border: 1px solid cadetblue;
+    
+    
+}
+
+.styleForm{
+    padding: .1% 2%;
+    font-size: 90%;
+        
+}
+.alignClear{
+    margin-bottom: 1%;
+    color: cadetblue
+}
+
+.alignForm{
+    margin-bottom: 1%;
+    
+}
+
+.alignColumn{
+    border-right: 2px solid beige;
+    text-align: end
+}
+
+.alignItemActive{
+    border-right: 2px solid aqua;
+    text-align: end;
+    color: aqua;
+    padding: 15px;
+}
+
+.alignItem{
+    text-align: end;
+    color: black;
+    margin-top: 10%;
+    padding: 15px;
+}
+
+@media screen and (min-width : 992px){
+    .stylePills{
+    border-radius: 700px;
+    margin: 1% 1%;
+    align-content: center;
+    justify-content: center;
+    padding: 3% 5%;
+    color: white;
+    font-size: 90%;
+}
+    
+    .headerMargin{
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width : 991px){
+    
+    .circleBg{
+        background-color: cadetblue;
+    }
+    
+    .stylePills{
+    border-radius: 0px 700px 700px 0px;
+    margin: 3% 2% 3% 0%;
+    align-content: center;
+    justify-content: center;
+    padding: .5% 2%;
+    color: white
+}
+    
+    .styleBox{
+        border-radius: 5%;
+    margin: 1% 2%;
+    align-content: center;
+    justify-content: center;
+    padding: .5% 10%;
+    border: 1px solid cadetblue;  
+    }
+    
+.alignForm{
+    margin-bottom: 3%
+}
+    
+.alignClear{
+    margin-bottom: 7%;
+    
+}
+    
+.alignItemActive{
+    border-right: 0px;
+    border-top: 2px solid aqua;
+    text-align: center;
+    color: aqua;
+    
+}
+
+.alignItem{
+    text-align: center;
+    color: black;
+    margin-top: 0%;
+    
+}
+    
+.alignColumn{
+    border-right: 0px solid beige;
+    border-top: 2px solid beige;
+    text-align: center;
+}
+    
+}
+
+.align{
+    margin-bottom: 2%
+}
+
+
+
+.alignPrice{
+   text-align: end 
+}
+
+.icon{
+    border: 1px solid beige;
+    padding: 6px 12px ;    
+}
+
+.iconActive{
+    background: cadetblue;
+    color: white;
+}
+
+.fontWeight{
+    font-weight: 500;
+}
+
+.fontSize{
+    font-size: 25px;
+    
+}
+
+.cut-text { 
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 160px; 
+  height: 1.2em; 
+  white-space: nowrap;
+}
+
+.block-with-text {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
+}
