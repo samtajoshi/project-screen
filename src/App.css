@@ -113,7 +113,9 @@
 }
 
 @media screen and (max-width : 991px){
-    
+    .gap{
+        margin-bottom: 10%;
+    }
     .circleBg{
         background-color: cadetblue;
     }

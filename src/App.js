@@ -1,73 +1,8 @@
 import React from 'react';
-//import logo from './logo.svg';
 import './App.css';
+import Info from './box.js';
 
-class Car extends React.Component {
-  render() {
-    return (
-       
-        <span>
-        <div class="col-12 d-none d-lg-block box"  style={{ borderLeftColor: this.props.colour}}>
-           <div class="row">
-                <div class="col-5 my-3 d-flex align-items-center">
-                    <div class="row align-items-center">
-                        <div class="col-12 align fontWeight cut-text">
-                        {this.props.brand.header}
-                        </div>
-                        <div class="col-12 ">
-                        <span>e-book</span> | <span>Travel and Tourism</span> | <span>400 words</span>
-                        </div>
-                    </div>               
 
-                </div>
-                <div class="col-1 d-flex align-items-center fontWeight my-3">
-                <i class='fas fa-rupee-sign'></i> {this.props.brand.price}
-                </div>
-                <div class="col-2 d-flex align-items-center  my-4">
-                <span class="stylePills" style={{ backgroundColor: this.props.colour }} >{this.props.brand.state}</span>
-                </div>
-                <div class="col-2 d-flex align-items-center my-3">
-                <i className={this.props.classIs}></i> &nbsp;{this.props.brand.timeLeft}
-                </div>
-                <button class="col-1 btn-block d-flex align-items-center styleBox my-4" style={{ backgroundColor: (this.props.brand.canAttempt==='Revise')?'cadetblue':'white', color:(this.props.brand.canAttempt==='Revise')?'white':'cadetblue' }} >
-                {this.props.brand.canAttempt}
-                </button>
-            </div>
-        </div>        
-        
-
-   
-        <div class="card col-12 d-block d-lg-none" style={{marginBottom:'30px',fontSize:'90%'}}>
-           <div class="row">
-                 <div class="stylePills" style={{ backgroundColor: this.props.colour }} >
-                     {this.props.brand.state}
-                 </div>
-                <div class="col-12">
-                    <div class="row justify-content-between">
-                        <div class="col-9 align fontWeight block-with-text " >{this.props.brand.header}</div>
-                        <div class="col-3 alignPrice fontWeight"><i class='fas fa-rupee-sign'></i>{this.props.brand.price}</div>
-                    </div>                
-                </div>  
-                <div class="col-12 align">
-                    <span>e-book</span> &nbsp;| &nbsp; <span>Travel and Tourism</span>  &nbsp;| &nbsp; <span>400 words</span>
-                </div>
-                <div class="col-12  card-footer" style={{backgroundColor:'white'}}>
-                    <div class="row justify-content-between">
-                        <div class="col-7 d-flex align-items-center" >
-                            <i className={this.props.classIs} ></i>&nbsp;{this.props.brand.timeLeft}
-                        </div>
-                        <button class="col-4  btn-block d-flex align-items-center styleBox" style={{ backgroundColor: (this.props.brand.canAttempt==='Revise')?'cadetblue':'white', color:(this.props.brand.canAttempt==='Revise')?'white':'cadetblue' }} >
-                        {this.props.brand.canAttempt}
-                        </button>
-                    </div>                
-                </div>
-            </div>
-        
-        </div>  
-</span>
-    );
-  }
-}
 
 class Apps extends React.Component {
   
@@ -147,7 +82,7 @@ render(){
                         else if(name.state==='Editorial Review'){ colour = 'orange'; classes='fa fa-stopwatch';}
                         else if(name.state==='Deadline Missed'){ colour = 'red'; classes='fa fa-star text-warning';}
                         else{ colour = 'cadetblue'; classes='fa fa-star text-warning';}
-                        return <Car colour={colour} classIs={classes} brand={name} />;
+                        return <Info colour={colour} classIs={classes} brand={name} />;
                       })
 
         return  (
@@ -158,9 +93,21 @@ render(){
 
   }
 
+function reset(){
+document.getElementById("my_select_1").selectedIndex = 0; //0 = option 1
+document.getElementById("my_select_2").selectedIndex = 0;
+document.getElementById("my_select_3").selectedIndex = 0;
+
+}
+
+
+
+
 class App extends React.Component {
   
 render(){
+    
+   var i=11;
     return (
     <div class="container-fluid">
         <div class="row headerMargin">
@@ -190,31 +137,38 @@ render(){
                     <div class="row">
                         <h1 class="col-12 align fontWeight">Your Jobs</h1>
                         <div class="col-12 col-lg-2 alignForm">
-                            <select class="form-control form-control-lg styleForm">
-                            <option>All Content Categories</option>
+                            <select class="form-control form-control-lg styleForm" id="my_select_1">
+                            <option selected disabled hidden>All Content Categories</option>
                             <option>Category_1</option>
+                            <option>Category_2</option>
                             </select>
                         </div>
                         <div class="col-12 col-lg-2 alignForm">
-                            <select class="form-control form-control-lg styleForm">
-                            <option>All Industries</option>
+                            <select class="form-control form-control-lg styleForm" id="my_select_2">
+                            <option selected disabled hidden>All Industries</option>
+                            <option>Category_1</option>
+                            <option>Category_2</option>
                             </select>
                         </div>
-                        <div class="col-12 col-lg-2 alignForm" >
-                            <select class="form-control form-control-lg styleForm">
-                            <option>Status</option>
+                        <div class="col-12 col-lg-2 alignForm">
+                            <select class="form-control form-control-lg styleForm" id="my_select_3">
+                            <option selected disabled hidden>Status</option>
+                            <option>Category_1</option>
+                            <option>Category_2</option>
                             </select>
                         </div>
-                        <div class="col-12 col-lg-1 alignClear d-flex align-items-center justify-content-start" >
+                        <div class="col-12 col-lg-1 alignClear d-flex align-items-center justify-content-start" onClick={reset}>
                             clear
                         </div>
                         
                         <div class="col-12 col-lg-3 alignForm d-flex align-items-center justify-content-lg-end" >
                             Displaying 1-8 of 123 jobs
                         </div>
-                        <div class="col-12 col-lg-2 alignForm " >
-                            <select class="form-control form-control-lg styleForm ">
-                            <option>Least time left first</option>
+                        <div class="col-12 col-lg-2 gap" >
+                            <select class="form-control form-control-lg styleForm">
+                            <option selected disabled hidden>Least time left first</option>
+                            <option>Category_1</option>
+                            <option>Category_2</option>
                             </select>
                         </div>
                         <div class="col-12 d-none d-lg-block">
@@ -227,12 +181,12 @@ render(){
                     </div>  
                     <div class="row justify-content-center mt-5" style={{marginBottom:'80px'}}>
                         <div class="mr-4 icon d-none d-lg-block">first</div>
-                        <div class="icon"><i class="fas fa-caret-left"></i></div>
-                        <div class="icon">10</div>
-                        <div class="icon iconActive">11</div>
-                        <div class="icon">12</div>
-                        <div class="icon d-none d-lg-block">13</div>
-                        <div class="icon d-none d-lg-block">14</div>
+                        <div class="icon"><i class="fas fa-caret-left" ></i></div>
+                        <div class="icon">{i-1}</div>
+                        <div class="icon iconActive" id="num">{i}</div>
+                        <div class="icon">{i+1}</div>
+                        <div class="icon d-none d-lg-block">{i+2}</div>
+                        <div class="icon d-none d-lg-block">{i+3}</div>
                         <div class="mx-3 d-flex align-items-end fontWeight">...</div>
                         <div class="icon">999</div>
                         <div class="icon"><i class="fas fa-caret-right"></i></div>
