@@ -166,7 +166,7 @@ render(){
                         </div>
                         <div class="col-12 col-lg-2 gap" >
                             <select class="form-control form-control-lg styleForm">
-                            <option selected disabled hidden>Least time left first</option>
+                            <option>Least time left first</option>
                             <option>Category_1</option>
                             <option>Category_2</option>
                             </select>
