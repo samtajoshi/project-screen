@@ -23,8 +23,8 @@ class Info extends React.Component {
                 <div class="col-1 d-flex align-items-center fontWeight my-3">
                 <i class='fas fa-rupee-sign'></i> {this.props.brand.price}
                 </div>
-                <div class="col-2 d-flex align-items-center  my-4">
-                <span class="stylePills" style={{ backgroundColor: this.props.colour }} >{this.props.brand.state}</span>
+                <div class="col-2 d-flex justify-content-center align-items-center  my-4"  style={{width:'100%'}}>
+               <span style={{width:'100%'}}> <span class="stylePills" style={{ backgroundColor: this.props.colour}} >{this.props.brand.state}</span></span>
                 </div>
                 <div class="col-2 d-flex align-items-center my-3">
                 <i className={this.props.classIs}></i> &nbsp;{this.props.brand.timeLeft}
